@@ -1,6 +1,6 @@
 class DockingStation 
     @bike = true
-    def self.docked_bike 
+    def self.release_bike
         if @bike == true 
             @bike = false
         else
