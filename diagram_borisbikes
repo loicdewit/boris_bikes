@@ -1,3 +1,5 @@
-|object            |messages|
-|bike              |bike_status|  
-|docking_station   |use_bike|
+|object            |      messages      |
+_________________________________________
+|person            |                    |
+|bike              |bike_status/working?|  
+|docking_station   |    release_bike    |
