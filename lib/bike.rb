@@ -1,5 +1,5 @@
 class Bike
-    def self.working?
+    def working?
         true
     end   
 end
