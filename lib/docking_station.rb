@@ -1,5 +1,7 @@
 class DockingStation 
 
+    attr_reader :bike
+
     def release_bike
         bike = Bike.new
         return bike
@@ -10,6 +12,6 @@ class DockingStation
     end
 
     def bike
-        
+        @bike
     end
 end
