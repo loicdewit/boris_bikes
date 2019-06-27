@@ -1,14 +1,14 @@
 require 'docking_station'
 require 'bike'
 
-describe DockingStation do 
+describe DockingStation do
     it 'responds to release_bike' do
         expect(subject).to respond_to :release_bike
     end
 
     describe 'release station' do
         it 'releases bike' do
-            expect(subject.release_bike).to be_a(Bike) 
+            expect { subject.release_bike }.to raise_error("No bikes available")
         end
     end
 
@@ -17,7 +17,7 @@ describe DockingStation do
     end
 
     it 'checks if the there is a bike' do
-        expect(subject).to respond_to :bike 
+        expect(subject).to respond_to :bike
     end
 
     it 'docks something' do
