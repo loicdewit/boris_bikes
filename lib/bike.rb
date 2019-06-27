@@ -1,5 +1,9 @@
 class Bike
     def working?
         true
-    end   
+    end
+    def report_broken
+      true
+    end
+
 end

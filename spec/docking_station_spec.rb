@@ -20,4 +20,20 @@ describe DockingStation do
       expect { dockingstation.dock_bike(Bike.new)}.to raise_error("bike rack full")
     end
   end
+  describe "initialise with argument for capacity" do
+    it "sets docking capacity" do
+      dockingstation = DockingStation.new(30)
+      dockingstation.capacity.times do
+        dockingstation.dock_bike(Bike.new)
+      end
+
+      expect(DockingStation).to respond_to(:new).with(1).argument
+      expect{dockingstation.dock_bike(Bike.new)}.to raise_error("bike rack full")
+    end
+  #describe "dock_bike method should  allow reporting broken bike" do
+  #  it "reports bike as broken if the bike is broken "
+  #  dockingstation
+  #end
+
+  end
 end
