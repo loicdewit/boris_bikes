@@ -34,6 +34,10 @@ describe DockingStation do
   #  it "reports bike as broken if the bike is broken "
   #  dockingstation
   #end
-
+  describe "report brocken bike changes the bike status" do
+    it "changes bike status according to bike condition" do
+      station = DockingStation.new
+      station.dock_bike(Bike.new, false)
+    end
   end
 end
