@@ -53,4 +53,11 @@ describe DockingStation do
       expect(station.release_bike).to eq "bike is not working"
     end
   end
+  describe "#dock_bike" do
+    it "accepts bike, working or not" do
+      station = DockingStation.new
+      bike = Bike.new
+      expect(station.dock_bike(bike, false)).to eq [bike]
+    end
+  end
 end
